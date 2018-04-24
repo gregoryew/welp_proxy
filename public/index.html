@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FEC Demo</title>
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "./stylesheet.css" />
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <div id="Photos"></div>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgTd6TT5nJdIsdSa8tx12dAa45nycbKYI&callback=initMap">
+    </script>
+    <div style="vertical-align: top; padding: 10px; display: inline-block; width: 60%; box-sizing: border-box;" id="Reviews"></div>
+    <div style="vertical-align: top; padding: 10px; display: inline-block; width: 35%; box-sizing: border-box;" id="Details"></div>
+    <script src="./lib/react.development.js"></script>
+    <script src="./lib/react-dom.development.js"></script>
+    <script src="http://localhost:3003/bundle.js"></script>
+    <script src="http://localhost:3002/app.js"></script>
+    <script src="http://localhost:3004/app.js"></script>
+  </body>
+</html>
