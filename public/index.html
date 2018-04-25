@@ -6,15 +6,28 @@
     <link rel = "stylesheet"
     type = "text/css"
     href = "./stylesheet.css" />
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "./style_dylan.css" />
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "./style_yabin.css" />
   </head>
   <body>
-    <div id="Summary"></div>
-    <div id="Photos"></div>
-    <div style="vertical-align: top; padding: 10px; display: inline-block; width: 60%; box-sizing: border-box;" id="Reviews"></div>
-    <div style="vertical-align: top; padding: 10px; display: inline-block; width: 35%; box-sizing: border-box;" id="Details"></div>
+    <div style="padding: 10px; display: flex; flex-direction: column; width: 100%">
+      <div style="padding: 10px; display: flex; width: 100%" id="Summary"></div>
+      <div style="display: flex; width: 100%" id="block1">
+        <div style="padding: 10px; display: flex; width: 30%" id="Map"></div>
+        <div style="padding: 10px; display: flex; width: 70%" id="Photos"></div>
+      </div>
+      <div style="display: flex; width: 100%" id="block2">
+          <div style="padding: 10px; display: flex; width: 80%" id="Reviews"></div>
+          <div style="padding: 10px; display: flex; width: 20%" id="Details"></div>
+      </div>
+    </div>
     <script src="./lib/react.development.js"></script>
     <script src="./lib/react-dom.development.js"></script>
-    <script src="http://localhost:3001/app.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script>
     <script src="http://localhost:3002/app.js"></script>
     <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3004/app.js"></script>
